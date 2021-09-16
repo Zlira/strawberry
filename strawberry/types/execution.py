@@ -9,6 +9,7 @@ from graphql.language import DocumentNode
 @dataclasses.dataclass
 class ExecutionContext:
     query: str
+    is_async: bool
     context: Any = None
     variables: Optional[Dict[str, Any]] = None
     operation_name: Optional[str] = None
